@@ -1,0 +1,373 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>JQuery Crash Course</title>
+  <script src="https://code.jquery.com/jquery-3.7.0.min.js"></script>
+  <style>
+    body{
+      font-size: 17px;
+      font-family: Arial, Helvetica, sans-serif;
+      background-color: #f4f4f4;
+      line-height: 1.5em;
+    }
+    header{
+      background-color: #333;
+      color: #fff;
+      padding: 20px;
+      text-align: center;
+      border-bottom: 4px #000 solid;
+      margin-bottom: 10px;
+    }
+    #container{
+      width: 90%;
+      margin: auto;
+      padding: 10px;
+    }
+    .myClass{
+      color: blue;
+      background: black;
+    }
+    #box{
+      background: darkgrey;
+      color: #fff;
+      width: 500px;
+      height: 90px;
+      padding: 40px;
+      text-align: center;
+    }
+    #box2{
+      background: red;
+      width: 100px;
+      height: 100px;
+      position: relative;
+    }
+  </style>
+
+</head>
+<body>
+  <header>
+    <h1>JQuery Crash Course</h1>
+  </header>
+  <!-- <div id="container">
+    <h1 id="heading1"> Heading one </h1>
+    <p id="para1"> Lorem ipsum dolor sit amet consectetur adipisicing elit. <span>Eaque at, totam dignissimos incidunt, doloribus consequuntur, illo obcaecati hic dolore amet odio. Rem beatae maiores corporis aut harum nesciunt. Ex quis praesentium natus explicabo asperiores sunt dolor ipsa sapiente aspernatur officia! Vitae</span> pariatur dolore totam. Placeat eos beatae labore, laudantium voluptates sed eveniet ratione nesciunt inventore assumenda blanditiis a amet veniam quos ipsum optio enim nobis quisquam suscipit similique quam sit dicta recusandae. Dignissimos omnis tenetur deserunt voluptate delectus, assumenda cum ipsam! Dolorem, beatae eaque magni et suscipit similique inventore aperiam in optio incidunt minus voluptatem ex consectetur officia ad iure.</p>
+    <h1 class="heading2"> Heading two </h1>
+    <p class="para2"> Lorem ipsum dolor sit amet consectetur adipisicing elit. Eaque at, totam dignissimos incidunt, doloribus consequuntur, <span>illo obcaecati hic dolore amet odio. Rem beatae maiores corporis aut harum nesciunt. Ex quis praesentium natus explicabo asperiores sunt dolor ipsa sapiente aspernatur</span> officia! Vitae pariatur dolore totam. Placeat eos beatae labore, laudantium voluptates sed eveniet ratione nesciunt inventore assumenda blanditiis a amet veniam quos ipsum optio enim nobis quisquam suscipit similique quam sit dicta recusandae. Dignissimos omnis tenetur deserunt voluptate delectus, assumenda cum ipsam! Dolorem, beatae eaque magni et suscipit similique inventore aperiam in optio incidunt minus voluptatem ex consectetur officia ad iure.</p>
+    <ul id="list">
+      <li>List Item1</li>
+      <li>List Item2</li>
+      <li>List Item3</li>
+      <li>List Item4</li>
+      <li>List Item5</li>
+      <li>List Item6</li>
+      <li>List Item7</li>
+    </ul>
+    <input type="button" value="Button 1">
+    <input type="submit" value="Submit 1">
+    <input type="text">
+    <a href="http://google.com">Google</a>
+    <a href="http://yahoo.com">Yahoo</a>
+  </div> -->
+  <!-- <div id="container">
+    <h3>Mouse Events</h3>
+    <button id="btn1">Button 1</button>
+    <button id="btn2">Button 2</button>
+    <p class="para1">Lorem ipsum dolor sit amet consectetur adipisicing elit. Inventore, veritatis illum ipsam, ut porro earum veniam nobis laudantium facere nam quae dolore placeat tempora repudiandae asperiores quibusdam ullam maiores fugit dolorum consequuntur dolores ab quas? Assumenda, ex consequuntur tempora consequatur minima sunt totam, sequi fugiat neque ut dignissimos, dolorum error ea sed sapiente quo consectetur laudantium voluptatum iure sint eum cupiditate aperiam. Nam sequi incidunt facere dicta aperiam? Deleniti quasi delectus dolorem? Ab non odit rerum sunt ea quod officiis, minima totam maiores est. Nobis aspernatur corporis id, obcaecati saepe laudantium distinctio blanditiis deserunt veniam? Ipsum alias totam ratione dolores.</p>
+    <h1 id="coords"></h1>
+  </div>
+  <hr> -->
+  <!-- <form id="form">
+    <label>Name</label><br>
+    <input type="text" id="name" name="name">
+    <br>
+    <label>Email</label><br>
+    <input type="text" id="email" name="email">
+    <br>
+    <label>Gender</label><br>
+    <select id="gender" name="gender">
+      <option value="male">Male</option>
+      <option value="female">Female</option>
+    </select>
+    <br>
+    <input type="submit" value="submit">
+  </form> -->
+  <!-- <button id="btn1">Button1</button>
+  <p class="para1">This is a parapgraph</p>
+  <p class="para2">This is a another parapgraph</p>
+  <div id="myDiv"></div>
+  <input type="text" id="newItem">
+  <ul id="list">
+    <li>List Item 1</li>
+    <li>List Item 2</li>
+    <li>List Item 1</li>
+    <li>List Item 4</li>
+  </ul>
+  <a href="https://www.google.com"></a>
+  <ul id="users"></ul> -->
+  <!-- <button id="btnFadeOut">FadeOut</button>
+    <button id="btnFadeIn">FadeIn</button>
+    <button id="btnFadetog">Fadetoggle</button>
+<hr>
+<button id="btnSlideUp">SlideUp</button>
+<button id="btnSlideDown">SlideDown</button>
+<button id="btnSlidetog">Slidetoggle</button>
+<button id="btnStop">Stop</button>
+<div id="box">Hello World</div>
+<hr>
+<button id="btnMoveLeft">MoveLeft</button>
+<button id="btnMoveRight">MoveRight</button>
+<button id="btnMoveAround">MoveAround</button>
+<hr>
+<button id="box2">Hi Again</button> -->
+<div id="container">
+  <div id="result"></div>
+  <ul id="users"></ul>
+<h3>Add Post</h3>
+  <form id="postForm" action="https://jsonplaceholder.typicode.com/posts">
+    <input type="text" id="title" placeholder="Title"><br>
+    <textarea placeholder="Body"></textarea><br>
+    <input type="submit" value="submit">
+  </form>
+  
+</div>
+
+
+<script>
+  $(document).ready(function(){
+
+      // $('#result').load('test.html', function(
+      //   responseTxt, statusTxt, xhr){
+      //     if(statusTxt == 'success'){
+      //       alert('it went fine');
+      //     }else if(statusTxt =='error'){
+      //       alert('Error: '+xhr.statusText);
+      //     }
+      //   });
+      // });
+
+        // $.get('test.html', function(data){
+        //   $('#result').html(data);
+        // });
+    // $.getJSON('users.json', function(data){
+    //   $.each(data, function(i, user){
+    //     $('ul#users').append('<li>'+user.firstName+'</li>');
+    //   })
+    // })
+
+    // $.ajax({
+    //   method: 'GET',
+    //   url: 'https://jsonplaceholder.typicode.com/posts',
+    //   dataType: 'json',
+    // }).done(function(data){
+    //   console.log(data);
+    //   $.map(data, function(post, i){
+    //     $('#result').append('<h3>'+post.title+'</h3><p>'+post.body+'</p>')
+    //   })
+    // })
+    $('#postForm').submit(function(e){
+      e.preventDefault();
+      var title = $('#title').val();
+      var body = $('#body').val();
+      var url = $(this).attr('action');
+
+      $.post(url, {title:title, body:body}).done(function(data){
+        console.log('Post Saved');
+        console.log(data);
+      });
+    });
+
+
+
+
+
+
+
+
+
+
+
+     
+  })
+    //   $('#btnFadeOut').click(function(){
+  //   $('#box').fadeOut(3000, function(){
+  //     $('#btnFadeOut').text('Its gone');
+  //   });
+  // })
+  // $('#btnFadeIn').click(function(){
+  //   $('#box').fadeIn(3000);
+  // })
+  // $('#btnFadetog').click(function(){
+  //   $('#box').fadeToggle(1000);
+  // })
+  // $('#btnSlideUp').click(function(){
+  //   $('#box').slideUp(3000);
+  // })
+  // $('#btnSlideDown').click(function(){
+  //   $('#box').slideDown(3000);
+  // })
+  // $('#btnSlidetog').click(function(){
+  //   $('#box').slideToggle(3000);
+  // })
+  // $('#btnStop').click(function(){
+  //   $('#box').stop();
+  // })
+  // $('#btnMoveRight').click(function(){
+  //   $('#box2').animate({
+  //     left: 500,
+  //     height: '300px',
+  //     width: '300px',
+  //     opacity: '0.5'
+  //   });
+  // })
+  // $('#btnMoveLeft').click(function(){
+  //   $('#box2').animate({
+  //     left: 0,
+  //     height: '100px',
+  //     width: '100px',
+  //     opacity: '1'
+  //   });
+  // })
+  // $('#btnMoveAround').click(function(){
+  //   var box = $('#box2');
+  //   box.animate({
+  //     left: 300
+  //   });
+  //   box.animate({
+  //     top: 300
+  //   });
+  //   box.animate({
+  //     left: 0,
+  //     top: 300
+  //   });
+  //   box.animate({
+  //     left: 0,
+  //     top: 0
+  //   });
+  // })
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+    // $('p.para1').css('color','red');
+        // $('p.para1').css({color:'red', background:'#ccc'});
+        // // $('p.para2').addClass('myClass');
+        // // $('p.para2').removeClass('myClass');
+        // $('#btn1').click(function(){
+        //   $('p.para2').toggleClass('myClass');
+        // })
+        // // $('#myDiv').text('Hello World')
+        // // $('#myDiv').html('<h3>Hello World</h3>');
+        // // alert($('#myDiv').text())
+
+        // $('ul').append('<li>Append list Item</li>');
+        // $('ul').prepend('<li>Preeppend list Item</li>');
+        // $('para1').appendTo('.para2');
+        // $('para1').prependTo('.para2');
+        // $('ul').before('<h4>Heello before</h4>');
+        // $('ul').after('<h4>Heello after</h4>');
+        // $('ul').empty();
+        // $('ul').detach();
+        // $('a').attr('target','_blank')
+        // alert($('a').attr('href'));
+        // $('a').removeAttr('target');
+        // $('p').wrap('<h1>')
+        // $('p').wrapAll('<h1>')
+          // $('#newItem').keyup(function(e){
+          //   var code = e.which;
+          //   if(code==13){
+          //   e.preventDefault()
+          // $('ul').append('<li>'+e.target.value+'</li>')
+          // }
+          // })
+          // var myArr = ['Brad', 'Kelly', 'Nate', 'Jose'];
+          //   $.each(myArr, function(i,val){
+          //     $('#users').append('<li>'+val+'</li>');
+          //   })
+            // var newArray = $('ul#list li').toArray();
+            // $.each(newArray, function(i,val){
+            // console.log(val.innerHTML);
+            // })
+              
+    // $('h1#heading1').hide();
+    // $('h1').hide();
+    // $('h1.heading2').hide();
+    // $('p span').css('color', 'red')
+      // $('ul#list li:first').css('color', 'red')
+      // $('ul#list li:last').css('color', 'red')
+      // $('ul#list li:even').css('background-color', 'grey')
+      // $('ul#list li:odd').css('background-color', 'lightgrey')
+      // $('ul#list li:nth-child(3n)').css('background-color', 'blue')//every third
+      // $(':submit').hide(); //column is to target the type from the elements
+      // $('[href]').css('color', 'red')
+      // $('a[href="http://yahoo.com"]').css('color', 'green')
+      // $('*').hide()
+      //   $('#btn1').click(function(){
+      //     alert('button clicked!')
+      //   })
+        // $('#btn1').on(click, function(){
+        //   alert('button clicked!')
+        // })
+        // $('#btn1').click(function(){
+        //   $('.para1').hide();
+        // })
+        // $('#btn2').click(function(){
+        //   $('.para1').toggle();
+        // })
+        // $('#btn1').dblclick(function(){
+        //   $('.para1').toggle();
+        // })
+        // $('#btn1').hover(function(){
+        //   $('.para1').toggle();
+        // })
+        // $('#btn1').on('mouseup', function(){
+        //   $('.para1').toggle();
+        // })
+        // $('#btn1').on('mousedown', function(){
+        //   $('.para1').toggle();
+        // })\
+      // $('#btn1').click(function(e){
+      //     // alert(e.currentTarget.id);
+      //     // alert(e.currentTarget.innerHTML);
+      //     // alert(e.currentTarget.outerHTML);
+      //     // alert(e.currentTarget.className);
+      //   })
+      // $(document).on('mousemove', function(e){
+      //     $('#coords').html('Coords: Y: '+e.clientY+' X: '+e.clientX);
+      //   })
+        // $('input').focus(function(){
+        //   //alert('focus');
+        //   $(this).css('background', 'pink')
+        // })
+        // $('input').blur(function(){
+        //   //alert('focus');
+        //   $(this).css('background', 'white')
+        // })
+        // $('input').keyup(function(e){
+        //   //alert('focus');
+        //   console.log(e.target.value);
+        // })
+        // $('select#gender').change(function(e){
+        //   alert(e.target.value);
+        // })
+        // $('#form').submit(function(e){
+        //   e.preventDefault();
+        //   var name = $('input#name').val();
+        //   console.log(name);
+        // })
+
+
+  </script>
+</body>
+</html>
